@@ -1,6 +1,7 @@
 // Strict Mode
 "use strict";
 
+// Initialize constant variables for each instrument sound with their file path
 const kick = new Audio("sounds/kick.wav");
 const clap = new Audio("sounds/clap.wav");
 const hihat = new Audio("sounds/hihat.wav");
@@ -10,47 +11,44 @@ const snare = new Audio("sounds/snare.wav");
 const tink = new Audio("sounds/tink.wav");
 const tom = new Audio("sounds/tom.wav");
 
-function playKick() {
-  kick.currentTime = 0;
-  kick.play();
-}
-
-function playClap() {
-  clap.currentTime = 0;
-  clap.play();
-}
-
-function playHihat() {
-  hihat.currentTime = 0;
-  hihat.play();
-}
-
-function playRide() {
-  ride.currentTime = 0;
-  ride.play();
-}
-
-function playOpenhat() {
-  openhat.currentTime = 0;
-  openhat.play();
-}
-
-function playSnare() {
-  snare.currentTime = 0;
-  snare.play();
-}
-
-function playTink() {
-  tink.currentTime = 0;
-  tink.play();
-}
-
-function playTom() {
-  tom.currentTime = 0;
-  tom.play();
-}
+const playSound = (instrument) => {
+    switch (instrument) {
+      case 'kick':
+        kick.play();
+        break;
+  
+      case 'clap':
+        clap.play();
+        break;
+  
+      case 'hihat':
+        hihat.play();
+        break;
+  
+      case 'ride':
+        ride.play();
+        break;
+  
+      case 'openhat':
+        openhat.play();
+        break;
+  
+      case 'snare':
+        snare.play();
+        break;
+  
+      case 'tink':
+        tink.play();
+        break;
+  
+      case 'tom':
+        tom.play();
+        break;
+    }
+  }
 
 const volumeSlider = document.getElementById("volumeslider");
+
 volumeSlider.addEventListener("input", function() {
   kick.volume = volumeSlider.value / 100;
   clap.volume = volumeSlider.value / 100;
