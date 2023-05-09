@@ -1,85 +1,63 @@
 // Strict Mode
 "use strict";
 
-const soundList = [
-    document.getElementById("kick"),
-    document.getElementById("clap"),
-    document.getElementById("hihat"),
-    document.getElementById("ride"),
-    document.getElementById("openhat"),
-    document.getElementById("snare"),
-    document.getElementById("tink"),
-    document.getElementById("tom")
-];
+const kick = new Audio("sounds/kick.wav");
+const clap = new Audio("sounds/clap.wav");
+const hihat = new Audio("sounds/hihat.wav");
+const ride = new Audio("sounds/ride.wav");
+const openhat = new Audio("sounds/openhat.wav");
+const snare = new Audio("sounds/snare.wav");
+const tink = new Audio("sounds/tink.wav");
+const tom = new Audio("sounds/tom.wav");
 
-const playKick = () => {
-    for (let i = 0 ; i < soundList.length ; i++) {
-        if (soundList[i].id === "kick") {
-            let kickAudio = new Audio('sounds/kick.wav');
-            kickAudio.play();
-        }
-    };
-};
+function playKick() {
+  kick.currentTime = 0;
+  kick.play();
+}
 
-const playClap = () => {
-    for (let i = 0 ; i < soundList.length ; i++) {
-        if (soundList[i].id === "clap") {
-            let clapAudio = new Audio('sounds/clap.wav');
-            clapAudio.play();
-        }
-    };
-};
+function playClap() {
+  clap.currentTime = 0;
+  clap.play();
+}
 
-const playHihat = () => {
-    for (let i = 0 ; i < soundList.length ; i++) {
-        if (soundList[i].id === "hihat") {
-            let hihatAudio = new Audio('sounds/hihat.wav');
-            hihatAudio.play();
-        }
-    };
-};
+function playHihat() {
+  hihat.currentTime = 0;
+  hihat.play();
+}
 
-const playRide = () => {
-    for (let i = 0 ; i < soundList.length ; i++) {
-        if (soundList[i].id === "ride") {
-            let rideAudio = new Audio('sounds/ride.wav');
-            rideAudio.play();
-        }
-    };
-};
+function playRide() {
+  ride.currentTime = 0;
+  ride.play();
+}
 
-const playOpenhat = () => {
-    for (let i = 0 ; i < soundList.length ; i++) {
-        if (soundList[i].id === "openhat") {
-            let openhatAudio = new Audio('sounds/openhat.wav');
-            openhatAudio.play();
-        }
-    };
-};
+function playOpenhat() {
+  openhat.currentTime = 0;
+  openhat.play();
+}
 
-const playSnare = () => {
-    for (let i = 0 ; i < soundList.length ; i++) {
-        if (soundList[i].id === "snare") {
-            let snareAudio = new Audio('sounds/snare.wav');
-            snareAudio.play();
-        }
-    };
-};
+function playSnare() {
+  snare.currentTime = 0;
+  snare.play();
+}
 
-const playTink = () => {
-    for (let i = 0 ; i < soundList.length ; i++) {
-        if (soundList[i].id === "tink") {
-            let tinkAudio = new Audio('sounds/tink.wav');
-            tinkAudio.play();
-        }
-    };
-};
+function playTink() {
+  tink.currentTime = 0;
+  tink.play();
+}
 
-const playTom = () => {
-    for (let i = 0 ; i < soundList.length ; i++) {
-        if (soundList[i].id === "tom") {
-            let tomAudio = new Audio('sounds/tom.wav');
-            tomAudio.play();
-        }
-    };
-};
+function playTom() {
+  tom.currentTime = 0;
+  tom.play();
+}
+
+const volumeSlider = document.getElementById("volumeslider");
+volumeSlider.addEventListener("input", function() {
+  kick.volume = volumeSlider.value / 100;
+  clap.volume = volumeSlider.value / 100;
+  hihat.volume = volumeSlider.value / 100;
+  ride.volume = volumeSlider.value / 100;
+  openhat.volume = volumeSlider.value / 100;
+  snare.volume = volumeSlider.value / 100;
+  tink.volume = volumeSlider.value / 100;
+  tom.volume = volumeSlider.value / 100;
+});
