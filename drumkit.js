@@ -11,41 +11,17 @@ const snare = new Audio("sounds/snare.wav");
 const tink = new Audio("sounds/tink.wav");
 const tom = new Audio("sounds/tom.wav");
 
-const playSound = (instrument) => {
-    switch (instrument) {
-      case 'kick':
-        kick.play();
-        break;
-  
-      case 'clap':
-        clap.play();
-        break;
-  
-      case 'hihat':
-        hihat.play();
-        break;
-  
-      case 'ride':
-        ride.play();
-        break;
-  
-      case 'openhat':
-        openhat.play();
-        break;
-  
-      case 'snare':
-        snare.play();
-        break;
-  
-      case 'tink':
-        tink.play();
-        break;
-  
-      case 'tom':
-        tom.play();
-        break;
-    }
-  }
+// Declare a constant Object with instrument name and file path for the sound
+const instruments = {
+    kick: "sounds/kick.wav",
+    clap: "sounds/clap.wav",
+    hihat: "sounds/hihat.wav",
+    ride: "sounds/ride.wav",
+    openhat: "sounds/openhat.wav",
+    snare: "sounds/snare.wav",
+    tink: "sounds/tink.wav",
+    tom: "sounds/tom.wav"
+}
 
 const volumeSlider = document.getElementById("volumeslider");
 
