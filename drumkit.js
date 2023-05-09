@@ -13,15 +13,15 @@ const tom = new Audio("sounds/tom.wav");
 
 // Declare a constant Object with instrument name and file path for the sound
 const instruments = {
-    kick: "sounds/kick.wav",
-    clap: "sounds/clap.wav",
-    hihat: "sounds/hihat.wav",
-    ride: "sounds/ride.wav",
-    openhat: "sounds/openhat.wav",
-    snare: "sounds/snare.wav",
-    tink: "sounds/tink.wav",
-    tom: "sounds/tom.wav"
-}
+    kick:    new Audio("sounds/kick.wav"),
+    clap:    new Audio("sounds/clap.wav"),
+    hihat:   new Audio("sounds/hihat.wav"),
+    ride:    new Audio("sounds/ride.wav"),
+    openhat: new Audio("sounds/openhat.wav"),
+    snare:   new Audio("sounds/snare.wav"),
+    tink:    new Audio("sounds/tink.wav"),
+    tom:     new Audio("sounds/tom.wav")
+  };
 
 const volumeSlider = document.getElementById("volumeslider");
 
