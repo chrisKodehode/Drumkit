@@ -1,7 +1,7 @@
 // Strict Mode
 "use strict";
 
-// Initialize constant variables for each instrument sound with their file path
+// Declare constant instrument variables and add their file path 
 const kick = new Audio("sounds/kick.wav");
 const clap = new Audio("sounds/clap.wav");
 const hihat = new Audio("sounds/hihat.wav");
@@ -11,20 +11,51 @@ const snare = new Audio("sounds/snare.wav");
 const tink = new Audio("sounds/tink.wav");
 const tom = new Audio("sounds/tom.wav");
 
-// Declare a constant Object with instrument name and file path for the sound
-const instruments = {
-    kick:    new Audio("sounds/kick.wav"),
-    clap:    new Audio("sounds/clap.wav"),
-    hihat:   new Audio("sounds/hihat.wav"),
-    ride:    new Audio("sounds/ride.wav"),
-    openhat: new Audio("sounds/openhat.wav"),
-    snare:   new Audio("sounds/snare.wav"),
-    tink:    new Audio("sounds/tink.wav"),
-    tom:     new Audio("sounds/tom.wav")
-  };
+// Declare instrument functions which play the corresponding instrument
+function playKick() {
+  kick.currentTime = 0;
+  kick.play();
+}
 
+function playClap() {
+  clap.currentTime = 0;
+  clap.play();
+}
+
+function playHihat() {
+  hihat.currentTime = 0;
+  hihat.play();
+}
+
+function playRide() {
+  ride.currentTime = 0;
+  ride.play();
+}
+
+function playOpenhat() {
+  openhat.currentTime = 0;
+  openhat.play();
+}
+
+function playSnare() {
+  snare.currentTime = 0;
+  snare.play();
+}
+
+function playTink() {
+  tink.currentTime = 0;
+  tink.play();
+}
+
+function playTom() {
+  tom.currentTime = 0;
+  tom.play();
+}
+
+// Declare a constant variable and insert the volume slider to it 
 const volumeSlider = document.getElementById("volumeslider");
 
+// Using eventlistener to the instrument volumes so they get changed when using the volume slider
 volumeSlider.addEventListener("input", function() {
   kick.volume = volumeSlider.value / 100;
   clap.volume = volumeSlider.value / 100;
