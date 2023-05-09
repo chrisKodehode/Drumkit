@@ -9,13 +9,22 @@
     <script src="drumkit.js" defer></script>
 </head>
     <body>
-        <button id="kick" onclick="playKick()">Kick</button>
-        <button id="clap" onclick="playClap()">Clap</button>
-        <button id="hihat" onclick="playHihat()">Hi hat</button>
-        <button id="ride" onclick="playRide()">Ride</button>
-        <button id="openhat" onclick="playOpenhat()">Open hat</button>
-        <button id="snare" onclick="playSnare()">Snare</button>
-        <button id="tink" onclick="playTink()">Tink</button>
-        <button id="tom" onclick="playTom()">Tom</button>
+        <div class="buttons">
+            <button id="kick" onclick="playKick()">Kick</button>
+            <button id="clap" onclick="playClap()">Clap</button>
+            <button id="hihat" onclick="playHihat()">Hi hat</button>
+            <button id="ride" onclick="playRide()">Ride</button>
+            <button id="openhat" onclick="playOpenhat()">Open hat</button>
+            <button id="snare" onclick="playSnare()">Snare</button>
+            <button id="tink" onclick="playTink()">Tink</button>
+            <button id="tom" onclick="playTom()">Tom</button>
+        </div>
+
+        <input 
+        type="range" 
+        name="Volume Slider" 
+        id="volumeslider"
+        min="0"
+        max="100">
     </body>
 </html>
