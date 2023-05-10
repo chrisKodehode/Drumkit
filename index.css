@@ -11,14 +11,10 @@ body {
 
 .button-styling {
     font-size: 20px;
-    width: 75px;
+    width: 120px;
     height: 50px;
     font-weight: bold;
     border: 2px solid black;
     border-radius: 4px;
     cursor: pointer;
-}
-
-#kick {
-    
 }
