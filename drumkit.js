@@ -57,7 +57,7 @@ const volumeSlider = document.getElementById("volumeslider");
 
 // Using eventlistener to the instrument volumes so they get changed when using the volume slider
 volumeSlider.addEventListener("input", function() {
-  // Calculating the volume value to be in between 0 and 1 aka normalized
+  // Calculating the volume value to be in between 0 and 1 aka normalized (if volume is 50% it is 0.5 and if it is 100% it is 1 etc)
   kick.volume = volumeSlider.value / 100;
   clap.volume = volumeSlider.value / 100;
   hihat.volume = volumeSlider.value / 100;
