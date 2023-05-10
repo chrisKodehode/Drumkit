@@ -42,3 +42,12 @@ input {
     position: fixed;
     margin-top: 150px;
 }
+
+#percentage {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    position: fixed;
+    margin-top: 150px;
+    margin-left: 40px;
+}
