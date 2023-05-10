@@ -6,12 +6,16 @@
 
 body {
     margin-top: 20px;
-    margin: 20px 0 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
 label {
     position: absolute;
-    margin: 20px 0 0 335px;
+    margin-top: 20px;
     font-size: 20px;
     font-weight: bold;
 }
@@ -19,7 +23,6 @@ label {
 input {
     width: 500px;
     margin-top: 50px;
-    margin-left: 139px;
 }
 
 .button-styling {
