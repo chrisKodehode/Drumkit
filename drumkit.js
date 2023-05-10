@@ -76,7 +76,7 @@ document.addEventListener('keypress', (playKick) => {
     tink.play();
   }
 
-  else if (drum === 'w') {
+  else if (drum === 'i') {
     tom.play();
   }
 
@@ -101,4 +101,4 @@ volumeSlider.addEventListener("input", function() {
   tom.volume = volumeSlider.value / 100;
 });
 
-// TODO: Add keybinds for the different drums & display volume value under the slider in %
+// TODO: display volume value under the slider in % make keypress spam able audio
