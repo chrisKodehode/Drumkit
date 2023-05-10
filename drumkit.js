@@ -104,4 +104,13 @@ volumeSlider.addEventListener("input", function() {
   tom.volume = volumeSlider.value / 100;
   });
 };
-// TODO: display volume value under the slider in % make keypress spam able audio
+
+const volumeDisplay = () => {
+  volumeSlider.addEventListener("input", function() {
+    volumeToNormalized();
+    const volumeCalculation = volumeSlider.value;
+    document.getElementById("volumePercentageText").innerHTML = volumeCalculation;
+  });
+};
+
+volumeDisplay();

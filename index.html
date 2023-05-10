@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drumkit</title>
-    <script src="drumkit.js" defer></script>
+    <script defer src="drumkit.js"></script>
     <link rel="stylesheet" href="index.css">
 </head>
     <body>
@@ -36,7 +36,7 @@
                 onclick="playTom()">Tom</button>
         </div>
 
-        <label for="">Change Volume:</label>
+        <label id="volume-text" for="">Change Volume:</label>
 
         <input 
         type="range" 
@@ -46,5 +46,6 @@
         max="100"
         value="50">
 
+        <span id="volumePercentageText"></span>
     </body>
 </html>
