@@ -87,8 +87,6 @@ document.addEventListener('keypress', (playKick) => {
 // Declare a constant variable and insert the volume slider to it 
 const volumeSlider = document.getElementById("volumeslider");
 
-
-
 const volumeToNormalized = () => {
   // Using eventlistener to the instrument volumes so they get changed when using the volume slider
 volumeSlider.addEventListener("input", function() {
