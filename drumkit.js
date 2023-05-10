@@ -13,44 +13,77 @@ const tom = new Audio("sounds/tom.wav");
 
 // Declare instrument functions which play the corresponding instrument
 function playKick() {
-  kick.currentTime = 0;
   kick.play();
 }
 
 function playClap() {
-  clap.currentTime = 0;
   clap.play();
 }
 
 function playHihat() {
-  hihat.currentTime = 0;
   hihat.play();
 }
 
 function playRide() {
-  ride.currentTime = 0;
   ride.play();
 }
 
 function playOpenhat() {
-  openhat.currentTime = 0;
   openhat.play();
 }
 
 function playSnare() {
-  snare.currentTime = 0;
   snare.play();
 }
 
 function playTink() {
-  tink.currentTime = 0;
   tink.play();
 }
 
 function playTom() {
-  tom.currentTime = 0;
   tom.play();
 }
+
+document.addEventListener('keypress', (playKick) => {
+  let drum = playKick.key;
+
+  if (drum === 'q') {
+    ride.currentTime = 0;
+    kick.play();
+  }
+  
+  else if (drum === 'w') {
+    clap.play();
+  }
+
+  else if (drum === 'e') {
+    hihat.play();
+  }
+
+  else if (drum === 'r') {
+    ride.play();
+  }
+
+  else if (drum === 't') {
+    openhat.play();
+  }
+
+  else if (drum === 'y') {
+    snare.play();
+  }
+
+  else if (drum === 'u') {
+    tink.play();
+  }
+
+  else if (drum === 'w') {
+    tom.play();
+  }
+
+  else {
+    alert("No instrument")
+  }
+});
 
 // Declare a constant variable and insert the volume slider to it 
 const volumeSlider = document.getElementById("volumeslider");
@@ -67,3 +100,5 @@ volumeSlider.addEventListener("input", function() {
   tink.volume = volumeSlider.value / 100;
   tom.volume = volumeSlider.value / 100;
 });
+
+// TODO: Add keybinds for the different drums & display volume value under the slider in %
