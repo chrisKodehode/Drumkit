@@ -48,7 +48,6 @@ document.addEventListener('keypress', (playKick) => {
   let drum = playKick.key;
 
   if (drum === 'q') {
-    ride.currentTime = 0;
     kick.play();
   }
   
