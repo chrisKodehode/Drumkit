@@ -88,7 +88,10 @@ document.addEventListener('keypress', (playKick) => {
 // Declare a constant variable and insert the volume slider to it 
 const volumeSlider = document.getElementById("volumeslider");
 
-// Using eventlistener to the instrument volumes so they get changed when using the volume slider
+
+
+const volumeToNormalized = () => {
+  // Using eventlistener to the instrument volumes so they get changed when using the volume slider
 volumeSlider.addEventListener("input", function() {
   // Calculating the volume value to be in between 0 and 1 aka normalized (if volume is 50% it is 0.5 and if it is 100% it is 1 etc)
   kick.volume = volumeSlider.value / 100;
@@ -99,6 +102,6 @@ volumeSlider.addEventListener("input", function() {
   snare.volume = volumeSlider.value / 100;
   tink.volume = volumeSlider.value / 100;
   tom.volume = volumeSlider.value / 100;
-});
-
+  });
+};
 // TODO: display volume value under the slider in % make keypress spam able audio
