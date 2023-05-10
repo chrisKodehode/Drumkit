@@ -9,16 +9,6 @@ body {
     margin: 20px 0 0 10px;
 }
 
-.button-styling {
-    font-size: 20px;
-    width: 120px;
-    height: 50px;
-    font-weight: bold;
-    border: 2px solid black;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
 label {
     position: absolute;
     margin: 20px 0 0 335px;
@@ -30,4 +20,14 @@ input {
     width: 500px;
     margin-top: 50px;
     margin-left: 139px;
+}
+
+.button-styling {
+    font-size: 20px;
+    width: 120px;
+    height: 50px;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 4px;
+    cursor: pointer;
 }
