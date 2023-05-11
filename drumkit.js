@@ -44,7 +44,7 @@ function playTom() {
   tom.play();
 }
 
-document.addEventListener('keypress', (playKick) => {
+document.addEventListener('keydown', (playKick) => {
   let drum = playKick.key;
 
   if (drum === 'q') {
