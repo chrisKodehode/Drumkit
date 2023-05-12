@@ -12,9 +12,16 @@ const tink = new Audio("sounds/tink.wav");
 const tom = new Audio("sounds/tom.wav");
 
 // Declare instrument functions which play the corresponding instrument
-function playKick() {
-  kick.play();
-}
+// function playInstrument() {
+//   kick.play();
+//   clap.play();
+//   hihat.play();
+//   ride.play();
+//   openhat.play();
+//   snare.play();
+//   tink.play();
+//   tom.play();
+// }
 
 function playClap() {
   clap.play();
@@ -72,8 +79,8 @@ const volumeDisplay = () => {
 
 volumeDisplay();
 
-document.addEventListener('keydown', (playKick) => {
-  let drum = playKick.key;
+document.addEventListener('keydown', (playInstrument) => {
+  let drum = playInstrument.key;
 
   if (drum === 'q') {
     kick.play();
