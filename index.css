@@ -1,3 +1,4 @@
+/* Reset properties for all elements */
 * {
     margin: 0;
     padding: 0;
@@ -5,6 +6,7 @@
     box-sizing: border-box;
 }
 
+/* Global styles */
 body {
     display: flex;
     flex-direction: column;
@@ -14,6 +16,7 @@ body {
     margin-top: 20px;
 }
 
+/* Volume text styles */
 #volume-text {
     position: absolute;
     margin-top: 40px;
@@ -22,11 +25,13 @@ body {
     font-weight: bold;
 }
 
+/* Input field styles */
 input {
     width: 500px;
     margin-top: 50px;
 }
 
+/* Styles for buttons */
 .button-styling {
     font-size: 20px;
     font-weight: bold;
@@ -40,6 +45,7 @@ input {
     cursor: pointer;
 }
 
+/* Volume percentage text styles */
 #volumePercentageText {
     color: black;
     font-size: 20px;
@@ -49,6 +55,7 @@ input {
     margin-top: 150px;
 }
 
+/* Percentage label styles */
 #percentage {
     color: black;
     font-size: 20px;
