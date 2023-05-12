@@ -12,35 +12,14 @@ const tink = new Audio("sounds/tink.wav");
 const tom = new Audio("sounds/tom.wav");
 
 // Declare instrument functions which play the corresponding instrument
-function playKick() {
+function playDrums() {
   kick.play();
-}
-
-function playClap() {
   clap.play();
-}
-
-function playHihat() {
   hihat.play();
-}
-
-function playRide() {
   ride.play();
-}
-
-function playOpenhat() {
   openhat.play();
-}
-
-function playSnare() {
   snare.play();
-}
-
-function playTink() {
   tink.play();
-}
-
-function playTom() {
   tom.play();
 }
 
