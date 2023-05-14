@@ -1,120 +1,52 @@
-// Strict Mode
 "use strict";
 
 // Declare constant instrument variables and add their file path 
-const kick = new Audio("sounds/kick.wav");
-const clap = new Audio("sounds/clap.wav");
-const hihat = new Audio("sounds/hihat.wav");
-const ride = new Audio("sounds/ride.wav");
-const openhat = new Audio("sounds/openhat.wav");
-const snare = new Audio("sounds/snare.wav");
-const tink = new Audio("sounds/tink.wav");
-const tom = new Audio("sounds/tom.wav");
+const drumKit = {
+  'kick': new Audio("sounds/kick.wav"),
+  'clap': new Audio("sounds/clap.wav"),
+  'hihat': new Audio("sounds/hihat.wav"),
+  'ride': new Audio("sounds/ride.wav"),
+  'openhat': new Audio("sounds/openhat.wav"),
+  'snare': new Audio("sounds/snare.wav"),
+  'tink': new Audio("sounds/tink.wav"),
+  'tom': new Audio("sounds/tom.wav")
+};
 
 // Declare instrument functions which play the corresponding instrument
-// function playInstrument() {
-//   kick.play();
-//   clap.play();
-//   hihat.play();
-//   ride.play();
-//   openhat.play();
-//   snare.play();
-//   tink.play();
-//   tom.play();
-// }
-
-function playClap() {
-  clap.play();
+function playSound(sound) {
+  if(drumKit[sound]) {
+    drumKit[sound].play();
+  } else {
+    alert("No instrument");
+  }
 }
 
-function playHihat() {
-  hihat.play();
-}
-
-function playRide() {
-  ride.play();
-}
-
-function playOpenhat() {
-  openhat.play();
-}
-
-function playSnare() {
-  snare.play();
-}
-
-function playTink() {
-  tink.play();
-}
-
-function playTom() {
-  tom.play();
-}
-
-// Declare a variable and insert the volume slider to it 
-let volumeSlider = document.getElementById("volumeslider");
-
-const volumeToNormalized = () => {
-  // Using eventlistener to the instrument volumes so they get changed when using the volume slider
+// Change volume
+const volumeSlider = document.getElementById("volumeslider");
 volumeSlider.addEventListener("input", function() {
-  // Calculating the volume value to be in between 0 and 1 aka normalized (if volume is 50% it is 0.5 and if it is 100% it is 1 etc)
-  kick.volume = volumeSlider.value / 100;
-  clap.volume = volumeSlider.value / 100;
-  hihat.volume = volumeSlider.value / 100;
-  ride.volume = volumeSlider.value / 100;
-  openhat.volume = volumeSlider.value / 100;
-  snare.volume = volumeSlider.value / 100;
-  tink.volume = volumeSlider.value / 100;
-  tom.volume = volumeSlider.value / 100;
-  });
+  let volume = volumeSlider.value / 100;
+  for (let sound in drumKit) {
+    drumKit[sound].volume = volume;
+  }
+  document.getElementById("volumePercentageText").innerHTML = volumeSlider.value;
+});
+
+// Create an object to map keyboard keys to their instrument sound
+const keyMappings = {
+  'q': 'kick',
+  'w': 'clap',
+  'e': 'hihat',
+  'r': 'ride',
+  't': 'openhat',
+  'y': 'snare',
+  'u': 'tink',
+  'i': 'tom',
 };
 
-const volumeDisplay = () => {
-  volumeSlider.addEventListener("input", function() {
-    volumeToNormalized();
-    const volumeCalculation = volumeSlider.value;
-    document.getElementById("volumePercentageText").innerHTML = volumeCalculation;
-  });
-};
-
-volumeDisplay();
-
-document.addEventListener('keydown', (playInstrument) => {
-  let drum = playInstrument.key;
-
-  if (drum === 'q') {
-    kick.play();
-  }
-  
-  else if (drum === 'w') {
-    clap.play();
-  }
-
-  else if (drum === 'e') {
-    hihat.play();
-  }
-
-  else if (drum === 'r') {
-    ride.play();
-  }
-
-  else if (drum === 't') {
-    openhat.play();
-  }
-
-  else if (drum === 'y') {
-    snare.play();
-  }
-
-  else if (drum === 'u') {
-    tink.play();
-  }
-
-  else if (drum === 'i') {
-    tom.play();
-  }
-
-  else {
-    alert("No instrument")
+// Add a keydown event listener to the document to play the instrument sound when a key is pressed down
+document.addEventListener('keydown', (event) => {
+  const key = event.key;
+  if(keyMappings[key]) {
+    playSound(keyMappings[key]);
   }
 });
