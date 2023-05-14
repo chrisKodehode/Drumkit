@@ -1,6 +1,6 @@
 "use strict";
 
-// Declare constant instrument variables and add their file path 
+// Declare an constant instrument variables and add their file path 
 const drumKit = {
   'kick': new Audio("sounds/kick.wav"),
   'clap': new Audio("sounds/clap.wav"),
@@ -12,7 +12,7 @@ const drumKit = {
   'tom': new Audio("sounds/tom.wav")
 };
 
-// Declare instrument functions which play the corresponding instrument
+// Declare an instrument function which play the selected instrument
 function playSound(sound) {
   if(drumKit[sound]) {
     drumKit[sound].play();
