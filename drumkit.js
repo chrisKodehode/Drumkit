@@ -2,14 +2,14 @@
 
 // Declare an constant instrument variables and add their file path 
 const drumKit = {
-  'kick': new Audio("sounds/kick.wav"),
-  'clap': new Audio("sounds/clap.wav"),
-  'hihat': new Audio("sounds/hihat.wav"),
-  'ride': new Audio("sounds/ride.wav"),
+  'kick':    new Audio("sounds/kick.wav"),
+  'clap':    new Audio("sounds/clap.wav"),
+  'hihat':   new Audio("sounds/hihat.wav"),
+  'ride':    new Audio("sounds/ride.wav"),
   'openhat': new Audio("sounds/openhat.wav"),
-  'snare': new Audio("sounds/snare.wav"),
-  'tink': new Audio("sounds/tink.wav"),
-  'tom': new Audio("sounds/tom.wav")
+  'snare':   new Audio("sounds/snare.wav"),
+  'tink':    new Audio("sounds/tink.wav"),
+  'tom':     new Audio("sounds/tom.wav")
 };
 
 // Declare an instrument function which play the selected instrument
